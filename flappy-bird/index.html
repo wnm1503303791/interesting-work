@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Excited!</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="apple-mobile-web-app-title" content="Flappy Frog" /> 
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <link rel="apple-touch-icon" href="icons/Icon-App-60x60@2x.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="icons/Icon-App-60x60@3x.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="icons/Icon-App-76x76@1x.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="icons/Icon-App-76x76@2x.png" />
+        <link rel="apple-touch-icon" sizes="58x58" href="icons/Icon-App-29x29@2x.png" />
+        <style>
+            body {
+                background: #430;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                overflow: hidden;
+            }
+            #screen {
+                display: inline-block;
+            }
+            #footer {
+                position: fixed;
+                bottom: 4px;
+                width: 100%;
+                font-size: small;
+            }
+            #footer a {
+                margin: 0 10px;
+                width: 100px;
+                text-decoration: none;
+            }
+            #footer a, #footer a:visited {
+                color: rgb(192, 68, 17);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="screen"></div>
+        <div id="footer">
+            <a href="https://www.mohu.club/" target="_blank">膜乎</a>
+            <a href="https://www.ruhu.ml/" target="_blank">辱乎</a>
+            <a href="https://hahaxixi.github.io/FlappyFrog/" target="_blank">尝试新版</a>
+        </div>
+        <script src="phaser.min.js"></script>
+        <script src="main.js"></script>
+        <script>
+            initGame({
+                feedback: '"5"可奉告',
+                feedbackFunc: function() {
+                    window.open('https://github.com/tusenpo/FlappyFrog/issues');
+                },
+                parent: document.querySelector('#screen')
+            });
+        </script>
+    </body>
+</html>
